@@ -1,0 +1,23 @@
+<% provide(:title, 'New Business') %>
+<h1 class="pageheader">Create a New Business</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@business) do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form_control' %>
+            
+            <%= f.label :address %>
+            <%= f.text_field :address, class: 'form_control' %>
+            </br>
+            </br>
+            
+            <%= f.label :sector, "Type of Business" %>
+            <%= f.select :sector, options_for_select(%w[-- Salon Gym PT Other]), class: 'form_control' %>
+            
+            </br>
+            </br>
+            <%= f.submit "Create new business", class: "btn btn-primary2" %>
+        <% end %>
+    </div>
+</div>

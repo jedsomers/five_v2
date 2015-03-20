@@ -1,0 +1,37 @@
+<% provide(:title, "About") %>
+
+    <h1 class="pageheader">About Five</h1>
+        <p style="color:#d5706f; font-style:italic">
+         Five turns client feedback into meaningful review scores to use for professional promotion. 
+        </p>
+        </br>
+
+        <p>
+            When you review someone on Five, you can be confident that your feedback is helping change someone's career and life. It contributes to a professional metric that they can use.
+        </p>
+        </br>
+        <p>
+         Until now, recommendations from clients were either stuck on Yelp, a simple 1-5 star rating, or both! 
+        </p>
+        </br>
+        
+        
+        <p>
+        With Five, your reviews belong to you. They are formulated to produce a meaningful rating score that you can use to get new clients, promotions, and jobs. It's a new line for your resume.
+        </p>
+        </br>
+        
+        
+        </br>
+        
+        </br>
+    
+        <p>
+        <% if logged_in? %>
+         Thanks for using Five!
+         <% else %>
+         <%= link_to "Get on Five Today!", signup_path %>
+         <% end %>
+        </p>
+          </br>
+          </br>

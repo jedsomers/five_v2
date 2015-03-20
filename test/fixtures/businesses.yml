@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+trifecta:
+  name: MyString
+  longitude: 1.5
+  latitude: 1.5
+
+bestBuy:
+  name: MyString
+  longitude: 1.5
+  latitude: 1.5

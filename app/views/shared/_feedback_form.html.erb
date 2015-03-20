@@ -1,0 +1,25 @@
+<%= form_for(@reviewee) do |f| %>
+    
+      <p>What did you think overall of <%= current_user.name %> ?</p>
+    <div class="ratinggroup" style="margin-top:0em;">
+     <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"1" %>  &nbsp;1&nbsp;</label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"2" %>  &nbsp;2&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"3" %> &nbsp;3&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"4" %> &nbsp;4&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"5" %> &nbsp;5&nbsp; </label>
+     </div>
+    </div>
+       
+
+    <div class="field">
+        <%= f.hidden_field :reviewee_id, :value => current_user.id %>
+    </div>
+    
+    </br>
+    
+    <%= f.submit "Thank you for the feedback", class: "btn btn-primary2" %>
+    </br>
+    </br>
+    
+<% end %>

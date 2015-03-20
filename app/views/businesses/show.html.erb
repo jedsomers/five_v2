@@ -1,0 +1,21 @@
+<% provide(:title, @business.name) %>
+<h1 class="pageheader">
+   <%= @business.name %>'s 
+   </br>
+   Five Members (<%= @business.users.count %>)
+</h1>
+
+<h2><%= Geocoder.search(@business.address).first.city %>, <%= Geocoder.search(@business.address).first.state %></h2>
+<% if current_user.admin? %>
+<h3><%= link_to "Edit Business", edit_business_path %></h3>
+<% end %>
+</br>
+<p class="plsfeed">Please give your feedback!</p>
+</br>
+
+
+<ul class="users">
+    <%= render @users %>
+</ul>
+
+

@@ -1,0 +1,22 @@
+<% provide(:title, 'Send an Invite') %>
+<h1 class="pageheader">Send an Invite </br>(<%= current_user.invitation_limit %> more left!)</h1>
+
+</br>
+</br>
+</br>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <%= form_for(@invitation) do |f| %>
+        <%= f.hidden_field :token %>
+           
+
+    <%= f.label :recipient_email, "Friend's Email Address" %></br>
+    <%= f.text_field :recipient_email %>
+    </br>
+    </br>
+    <%= f.submit "Send", class: "btn btn-primary2" %>
+
+<% end %>
+
+</div>
+</div>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+jed:
+    name: Jed Somers
+    email: jed@example.com
+    password_digest: <%= User.digest('password') %>
+    hometown: Glencoe
+    age: 25
+    favorite: Vanilla
+    quote: "Favorite"
+    admin: true
+    manager: true
+    business_id: 1
+
+jillian:
+    name: Jillian Cohn
+    email: jillian@example.com
+    password_digest: <%= User.digest('password') %>
+    hometown: LA
+    age: 24
+    favorite: Chocolate
+    quote: "Best"
+    business_id: 1
+

@@ -1,0 +1,33 @@
+<% provide(:title, 'Find Five Members') %>
+</br>
+<h1 class="pageheader">Find a Five Salon</h1>
+</br>
+
+<% if @businesses.empty? %>
+<h3>Unfortunately there are no Five Salons near you yet.</h3>
+</br>
+<h3>If you have a comment about an employee, just send an email to <a href="mailto:team@fiveme.io?Subject=Hey%20Five%20team!">team@fiveme.io</a> with the name of the salon and employee.</h3>
+</br>
+<h3>We can make sure they get to keep that review once they join Five!</h3>
+
+<% else %>
+<ol class="business">
+    <% @businesses.each do |business| %>
+    <li>
+         <%= link_to business.name, business %> 
+    </li>
+    <% end %>
+</ol>
+<% end %>
+</br>
+</br>
+</br>
+<div class="map">
+<iframe width="600" height="450" frameborder="0" 
+style="border:0" 
+src="https://www.google.com/maps/embed/v1/search?q=<%= current_user.latitude %>%20<%= current_user.longitude %>&key=AIzaSyClueDRPj-vQsJ7paz_lh5AaNwSxANxoQE">
+</iframe>
+</div>
+</br>
+</br>
+</br>

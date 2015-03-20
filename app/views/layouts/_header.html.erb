@@ -1,0 +1,75 @@
+<header class="navbar navbar-fixed-top">
+      <div class="container">
+        <%= link_to image_tag("FiveLogo_white_wro_small.png", alt: "Five logo"), root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav pull-right">
+            <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <%= image_tag("hamburger.png", alt: "menu icon") %>
+                </a>
+                <ul class="dropdown-menu pull-left">
+                 <% if logged_in? %>
+                 
+                 
+                 <% if current_user.manager? %>
+                 <li><%= link_to "Manager", manager_path %></li>
+                 
+                 <% if (current_user.invitation_limit > 0) %>
+                 <li><%= link_to "Invite (" + current_user.invitation_limit.to_s + ")", new_invitation_path %></li>
+                 <% end %>
+                 <li> 
+                 <% if current_user.admin? %>
+                 <%= link_to "Search", "#", :id => 'findMe' %>
+                <script>
+                  $(function(){
+                     $("a#findMe").click(function(){
+                         if (navigator.geolocation) {
+                             navigator.geolocation.getCurrentPosition(function (position) {
+                                 $.post('/users/set_geolocation/', {latitude: position.coords.latitude,
+                                             longitude: position.coords.longitude,
+                                             dataType: 'float'});
+                             }, function () {
+                                 alert('We couldn\'t find your position.');
+                             });
+                         } else {
+                             alert('Your browser doesn\'t support geolocation.');
+                         }
+                      });
+                  })
+                </script>
+               </li>
+               <% end %>
+                <% end %>
+                 
+                  
+                  <li><%= link_to "Feedback", instructreview_path %></li>
+                  <li><%= link_to "Huh?", howitworks_path %></li>
+                  
+                  <% if current_user.admin? %>
+                  <li><%= link_to "Create Biz", newbiz_path %></li>
+                  
+                  <% end %>
+                  <li><%= link_to "About", about_path %></li>
+                  
+                  <li><%= link_to "Contact", contact_path %></li>
+                  
+                  <li><%= link_to "FAQ", faq_path %></li>
+                  
+                  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                  <% else %>
+                  <li><%= link_to "About", about_path %></li>
+                  
+                  <li><%= link_to "Contact", contact_path %></li>
+                  
+                  <li><%= link_to "FAQ", faq_path %></li>
+                  
+                  <li><%= link_to "Log in", login_path %></li>
+                  <% end %>
+              </ul>
+          </li>
+
+            
+          </ul>
+        </nav>
+      </div>
+  </header>

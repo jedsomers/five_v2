@@ -1,0 +1,62 @@
+<%= form_for(@writer) do |f| %>
+
+    <div class ="feedbackpagepane">
+        </br>
+  <p class="feedbackq">How was your experience <b>overall</b>?</p>
+    <div class="ratinggroup" style="margin-top:-1em;">
+     <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"1" %>  &nbsp;1&nbsp;</label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"2" %>  &nbsp;2&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"3" %> &nbsp;3&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"4" %> &nbsp;4&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :rating, :"5" %> &nbsp;5&nbsp; </label>
+     </div>
+    </div>
+       </br>
+       </div>
+       
+       </br>
+       <div class ="feedbackpagepane">
+       </br>
+         <p class="feedbackq"><%= @user.name %>'s <b>Empathy</b>:</p>
+    <div class="ratinggroup" style="margin-top:-1em;">
+     <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-rating"><%= radio_button :review, :question2, :"1" %>  &nbsp;1&nbsp;</label>
+    <label class="btn btn-rating"><%= radio_button :review, :question2, :"2" %>  &nbsp;2&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question2, :"3" %> &nbsp;3&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question2, :"4" %> &nbsp;4&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question2, :"5" %> &nbsp;5&nbsp; </label>
+     </div>
+    </div>
+    </br>
+    </div>
+    </br>
+    
+    <div class ="feedbackpagepane">
+    </br>
+      <p class="feedbackq"><%= @user.name %>'s <b>Creativity and Expertise</b>:</p>
+    <div class="ratinggroup" style="margin-top:-1em;">
+     <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-rating"><%= radio_button :review, :question3, :"1" %>  &nbsp;1&nbsp;</label>
+    <label class="btn btn-rating"><%= radio_button :review, :question3, :"2" %>  &nbsp;2&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question3, :"3" %> &nbsp;3&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question3, :"4" %> &nbsp;4&nbsp; </label>
+    <label class="btn btn-rating"><%= radio_button :review, :question3, :"5" %> &nbsp;5&nbsp; </label>
+     </div>
+    </div>
+
+ 
+
+        <%= f.hidden_field :reviewee_id, :value => current_user.id %>
+
+    
+    </br>
+    </div>
+    </br>
+    </br>
+    </br>
+    <%= f.submit "Thank you for your feedback", class: "btn btn-primary2" %>
+    </br>
+    </br>
+    
+<% end %>

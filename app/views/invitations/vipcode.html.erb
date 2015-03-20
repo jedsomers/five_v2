@@ -1,0 +1,20 @@
+<% provide(:title, "Your FIVE VIP Code") %>
+<h1 class="pageheader">VIP Access!</h1>
+</br>
+<p>FIVE is only open to early VIP users at the moment. If you have a VIP code please enter it below and you will be taken to a page to create your FIVE account.</p>
+</br>
+</br>
+</br>
+
+<div class="row">
+    <div class="col-md-6 cold-md-offset-1">
+       <%= form_for @vipcode do |f| %>
+ 
+  <%= f.text_field @vipcode, :placeholder => 'Email here, please' %>
+  </br>
+  <%= f.submit "I'm excited to join FIVE", class: "btn btn-primary2" %>
+  <% end %>
+        
+
+    </div>
+</div>

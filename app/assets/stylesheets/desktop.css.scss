@@ -1,0 +1,319 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+/* universal */
+
+.flash {
+  text-align: center !important;
+  color: white !important;
+   font-size: 2.0em !important;
+}
+
+.notice {
+  text-align: center !important;
+  color: white !important;
+  font-size: 2.0em !important;
+}
+
+.alert {
+  text-align: center !important;
+  color: white !important;
+   font-size: 2.0em !important;
+}
+
+.success {
+  text-align: center !important;
+  color: white !important;
+   font-size: 2.0em !important;
+}
+
+body {
+    padding-top: 115px;
+    padding-bottom: 140px;
+    background-color: #eeeeee;
+}
+
+section {
+    overflow: auto;
+
+}
+
+ textarea { 
+   resize: vertical; 
+} 
+
+.center {
+    text-align: left;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+
+
+#logoD {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+#logoD:hover {
+    color: #fff;
+}
+
+.faqD {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #EF5350;
+}
+
+.faqdivD {
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-size: 2.4em;
+    letter-spacing: 1px;
+    margin-bottom: 0.1em;
+    text-align: center;
+    color: #5C6BC0;
+    font-family: Century Gothic, Verdana, sans-serif;
+}
+
+p {
+    font-size: 1.8em;
+    line-height: 1.7em;
+    font-family: Century Gothic, Verdana, sans-serif;
+}
+
+.pageheaderD {
+    font-size: 3.5em;
+}
+
+
+
+
+/* home page styling */
+
+
+.homeheadD {
+      // border-left: 10em solid #EF5350;
+       //border-right: 10em solid #EF5350;
+       //background: #EF5350;
+       background: #5c6bc0; /* Old browsers */
+background: -moz-linear-gradient(top,  #5c6bc0 7%, #ef5350 14%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(7%,#5c6bc0), color-stop(14%,#ef5350)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5c6bc0 7%,#ef5350 14%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5c6bc0 7%,#ef5350 14%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5c6bc0 7%,#ef5350 14%); /* IE10+ */
+background: linear-gradient(to bottom,  #5c6bc0 7%,#ef5350 14%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c6bc0', endColorstr='#ef5350',GradientType=0 ); /* IE6-9 */
+
+       text-align: center;
+       margin-left: -20em;
+       margin-right: -20em;
+       padding-top: -140px;
+       margin-top: -140px;
+       margin-bottom: -420px;
+       padding-bottom: -120px;
+
+}
+
+#taglineD {
+    font-size: 2.4em;
+    text-align: center;
+    color: white;
+    margin-left: 10em;
+    margin-right: 10em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#tagline2D {
+    font-size: 1.9em;
+    text-align: left;
+    color: black;
+    line-height: 1.6em;
+    padding-left: 5.0em;
+    padding-right: 5.0em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+
+
+#or2D {
+    color: white;
+    text-align: center;
+    font-size: 1.7em;
+    font-style: italic;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+
+#homecustomersD {
+    background-color: #d2d2d2;
+    margin-right: 15em !important;
+    margin-left: 15em !important;
+    padding-left: 5.0em;
+    padding-right: 5.0em;
+}
+
+#homeemploybizD {
+    background-color: white;
+    margin-right: 15em !important;
+    margin-left: 15em !important;
+    padding-left: 5.0em;
+    padding-right: 5.0em;
+}
+
+/* navbar */
+.navbar {
+    background-color: rgba(92,	107,	192, 0.95);
+    border-color: #5c6bc0;
+    font-weight: bold;
+         -webkit-box-shadow: 0px 8px 18px -15px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 8px 18px -15px rgba(0,0,0,1);
+    box-shadow: 0px 8px 18px -15px rgba(0,0,0,1);
+    .deskItems {
+        font-size: 1.6em;
+        padding-top: 28px;
+        color: white !important;
+    }
+
+}
+
+
+
+/* forms */
+
+
+input, textarea, select, form-control, .uneditable-input {
+    border: 0.08em solid white;
+    background-color: #EF5350;
+    border-radius: 5px;
+    width: 60%;
+    margin-bottom: 15px;
+    margin-left: 2.5px;
+    font-size: 2.4em;
+    color: white;
+    height: auto !important;
+}
+
+input {
+    height: auto !important;
+    font-size: 2.4em;
+    text-align: center;
+}
+
+
+
+label {
+    font-size: 2.4em;
+    font-family: Century Gothic, Verdana, sans-serif;
+}
+
+#error_explanation {
+    color: red;
+    font-size: 3.1em;
+    ul {
+        color: red;
+        font-size: 3.1em;
+        margin: 0 0 30px 0;
+    }
+}
+
+.field_with_errors {
+    @extend .has-error;
+    .form-control {
+        color: #EF5350;
+        //$state-danger-text;
+    }
+}
+
+
+/* BUTTONS */
+
+/* buttons with weird issues on signup, login, review and user edit pages for the desktop */
+.btn.btn-primary2d {
+    font-size: 2.4em;
+    text-align: center !important;
+    border-color: #FFFFFF; 
+    border-width: 0.08em;
+    margin-left: 0em;
+    margin-right: 0em;
+
+}
+
+
+
+.btn-primary2d { 
+  color: #FFFFFF; 
+  background-color: #EF5350; 
+  border-color: #FFFFFF; 
+  border-width: 0.08em;
+  font-size: 2.4em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+} 
+ 
+.btn-primary2d:hover, 
+.btn-primary2d:focus, 
+.btn-primary2d:active, 
+.btn-primary2d.active, 
+.open .dropdown-toggle.btn-primary2d { 
+  color: #5C6BC0 !important; 
+  background-color: #EF5350 !important; 
+  border-color: #5C6BC0; 
+  border-width: 0.08em;
+  //font-weight: bold;
+
+} 
+ 
+.btn-primary2d:active, 
+.btn-primary2d.active, 
+.open .dropdown-toggle.btn-primary2d { 
+  background-image: none; 
+} 
+ 
+.btn-primary2d.disabled, 
+.btn-primary2d[disabled], 
+fieldset[disabled] .btn-primary2d, 
+.btn-primary2d.disabled:hover, 
+.btn-primary2d[disabled]:hover, 
+fieldset[disabled] .btn-primary2d:hover, 
+.btn-primary2d.disabled:focus, 
+.btn-primary2d[disabled]:focus, 
+fieldset[disabled] .btn-primary2d:focus, 
+.btn-primary2d.disabled:active, 
+.btn-primary2d[disabled]:active, 
+fieldset[disabled] .btn-primary2d:active, 
+.btn-primary2d.disabled.active, 
+.btn-primary2d[disabled].active, 
+fieldset[disabled] .btn-primary2d.active { 
+  background-color: #FCFCFC; 
+  border-color: #5C6BC0; 
+} 
+ 
+.btn-primary2d .badge { 
+  color: #FCFCFC; 
+  background-color: #EF5350; 
+  border-width: 0.08em;
+}
+
+

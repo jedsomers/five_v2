@@ -1,0 +1,116 @@
+<head>
+<style>
+  background {color:#EF5350}
+  h1   {color:#5C6BC0}
+  h2   {color:#5C6BC0}
+  h3   {color:#5C6BC0}
+  p    {color:#747474}
+</style>
+</head>
+
+<div class="homehead">
+
+</br>
+</br>
+</br>
+
+<h2 id="tagline">Claim your professional reputation</p>
+</br>
+</br>
+
+<h2 id="tagline2">Five is a web and mobile platform for wellness professionals to collect feedback from clients. Five turns that feedback into meaningful review scores to use for professional promotion.</h2>
+</br>
+
+<% if logged_in? %>
+
+
+ </br>
+ </br>
+ </br>
+ </br>
+ </br>
+ </br>
+<%= link_to "Log out", logout_path, method: "delete", class: "btn btn-primary center-block" %>
+</br>
+</br>
+</br>
+</br>
+</br>
+<% else %>
+</br>
+<%= link_to "Log in", login_path, class: "btn btn-primary center-block" %>
+</br>
+<p id="or">Or</p>
+</br>
+<%= link_to "Sign Up", vipcode_path, class: "btn btn-primary center-block" %>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<% end %>
+
+</br>
+</br>
+</br>
+</div>
+
+
+<div id="homeemploybiz">  
+</br>
+</br>
+
+<h3><%= image_tag("user2b.png", alt: "Current User") %></h3>
+<h3 class="home_titles">Salon Professionals</h3>
+<p class="home_p">Use your reviews to help acquire new clients or earn that next promotion.</p>
+<br>
+<p class="home_p">Collect and own your own data - reviews about you should belong to you. </p>
+</br>
+
+</br>
+</div>
+
+<div id="homecustomers">
+</br>
+</br>
+<h3><%= image_tag("usersb.png", alt: "Users") %></h3>
+<h3 class="home_titles">Customers</h3>
+<p class="home_p">Quickly and easily leave feedback for your barber or stylist for them to use for professional promotion.</p> 
+</br>
+<p class="home_p">No more “staying on the line” or entering a 25+ digit code online to submit your feedback without any idea of how it is used.</p>
+</br>
+</br>
+</div>
+
+<div id="homeemploybiz"> 
+</br>
+</br>
+<h3><%= image_tag("officeb.png", alt: "Businesses") %></h3>
+<h3 class="home_titles">Salons and Beauty Schools</h3>
+<p class="home_p">Stop spending time and money on feedback surveys that produce minimal data.</p>
+</br>
+<p class="home_p">Start making informed decisions in a labor market that is difficult to navigate.</p>
+</br>
+</br>
+
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58772031-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+

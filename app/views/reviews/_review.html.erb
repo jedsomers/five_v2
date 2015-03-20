@@ -1,0 +1,16 @@
+<li class="review">
+    
+    <%= link_to gravatar_for(review.writer, size: 65), review.writer %>
+    <span class="rating">: &nbsp;&nbsp;&nbsp;<%= review.rating %></span>
+
+    </br>
+    <span class="reviewer"><%= link_to review.writer.name, review.writer %></span>
+    <span class="content"> &nbsp;<%= review.content %></span>
+    <span class="timestamp">
+         <span style="font-weight:italic">(<%= time_ago_in_words(review.created_at) %> ago)</span>
+    </span>
+
+
+
+</li>
+

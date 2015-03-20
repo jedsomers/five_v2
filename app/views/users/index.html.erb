@@ -1,0 +1,28 @@
+<% provide(:title, 'Search') %>
+</br>
+<h1 class="pageheader">Find the Best Fives</h1>
+</br>
+<%= form_tag(users_path, method: "get") do %>
+    <label>City: </label><%= select_tag :locate, options_for_select(%w[-- DC Chicago]) %>
+    <label>Type: </label><%= select_tag :search, options_for_select(%w[-- Hair-Stylist/Barber Restaurant Other]) %>
+    <%= submit_tag ("Search"), class: "btn btn-primary2" %>
+<% end %>
+
+</br>
+</br>
+<ul class="users">
+    <% @users.each do |user| %>
+    <li>
+        <%= gravatar_for user, size: 250 %>
+        </br>
+        <span class="reviewnumber"><%= user.avgrt %></span>
+        </br>
+        <%= link_to user.name, user %>
+        </br>
+        <% if user.business != nil %>
+        <span class="useindbiz"><%= link_to user.business.name, user.business %></span>
+        <% end %>
+        
+    </li>
+    <% end %>
+</ul>

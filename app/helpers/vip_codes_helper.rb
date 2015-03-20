@@ -1,0 +1,2 @@
+module VipCodesHelper
+end

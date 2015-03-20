@@ -1,0 +1,60 @@
+<footer class="navbar navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="footer-body">
+                <ul class="nav navbar-nav">
+                    <% if logged_in? %>
+                    <li>
+                        <ul class="footericons">
+                            <li> <%= link_to image_tag("feedbubble.png", alt: "Current User"), instructreview_path %></li>
+                            <li><%= link_to "Get Feedback", instructreview_path, class: "btn btn-primary3 center-block" %></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <ul>
+                      
+                   
+                    </ul>
+                    </li>
+                    <li>
+                        <ul class="footericons">
+                            <li> <%= link_to image_tag("user2.png", alt: "Profile"), current_user %></li>
+                            <li><%= link_to "My Score", current_user, class: "btn btn-primary3 center-block" %></li>
+                        </ul>
+                    </li>
+                    <% else %>
+                    
+                    <li>
+                        <ul class="footericons">
+                             <li> <%= link_to image_tag("info.png", alt: "About"), about_path %></li>
+                            <li><%= link_to "About", about_path %></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <ul class="footericons">
+                             <li> <%= link_to image_tag("envelope.png", alt: "Contact"), contact_path %></li>
+                            <li><%= link_to "Contact", contact_path %></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <ul class="footericons">
+                             <li> <%= link_to image_tag("question.png", alt: "FAQ"), faq_path %></li>
+                            <li><%= link_to "FAQ", faq_path %></li>
+                        </ul>
+                    </li>
+                    
+                    <% end %>
+                            
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

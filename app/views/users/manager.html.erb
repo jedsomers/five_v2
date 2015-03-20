@@ -1,0 +1,17 @@
+<% provide(:title, 'Manager') %>
+</br>
+<h1 class="pageheader">Five members you manage</h1>
+
+</br>
+</br>
+<ul class="users">
+    <% @users.each do |user| %>
+    <li>
+        <%= gravatar_for user, size: 250 %>
+        </br>
+        <span class="reviewnumber"><%= user.avgrt.round(0) %></span>
+        </br>
+        <%= link_to user.name, user %>
+    </li>
+    <% end %>
+</ul>
